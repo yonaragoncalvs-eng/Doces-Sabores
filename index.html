@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Sabores · Gelado de Múcua · Centralidade do Zango</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="dc.css">
+    <!-- Leaflet CSS para mapas interativos -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- HEADER COM LOGO -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo imagem -->
+            <img src="img/WhatsApp Image 2026-03-12 at 19.56.00.jpeg" alt="Doces Sabores Logo" class="logo-imagem">
+            <div class="logo-text">
+                <h2>DOCES SABORES</h2>
+                <p><b>GELADOS GOURMET ARTESANAIS · ANGOLA</b></p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-page="home">Home</a>
+            <a href="#" class="nav-link" data-page="produtos">Produtos</a>
+            <a href="#" class="nav-link" data-page="pedidos">Pedidos</a>
+            <a href="#" class="nav-link" data-page="contato">Contato</a>
+        </div>
+    </nav>
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <div class="nav-pages">
+        <button class="page-btn active" data-page="home">🏠 Home</button>
+        <button class="page-btn" data-page="produtos">🍦 Produtos</button>
+        <button class="page-btn" data-page="pedidos">📝 Pedidos</button>
+        <button class="page-btn" data-page="contato">📞 Contato</button>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page active-page">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="bandeira">
+                    <img src="img/transferir (2).png" alt="Bandeira Angola">
+                    <span>Feito em Angola, Luanda</span>
+                </div>
+                <h1>Gelados de Múcua<br>direto do Zango 8000</h1>
+                <p class="local"><i class="fas fa-map-pin"></i> Produzido em Luanda</p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Cremoso, natural e sem conservantes. O verdadeiro gelado artesanal de Angola.</p>
+                <button class="page-btn" data-page="produtos" style="background: var(--azul-logo); color: white; text-decoration: none; padding: 1rem 3rem; border-radius: 50px; border: none; font-size: 1rem; cursor: pointer;">Ver sabores →</button>
+            </div>
+            <div class="home-image">
+                <img src="img/198503ad3001b3668b44ba3c8eaa89fc.jpg" alt="Gelado de Múcua">
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUTOS PAGE -->
+    <div id="produtos-page" class="page">
+        <div class="section-title">
+            <h2>Nossos sabores</h2>
+            <div class="bar"></div>
+            <p style="margin-top: 1rem; color: var(--azul-logo);">🍦 Sabores incríveis para você!</p>
+        </div>
+        <div class="produtos-grid">
+            <!-- 1. Múcua Puro -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/fe607026eff31c201aeef2218a09af60.jpg" alt="Gelado de Múcua Puro">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Múcua Puro</h3>
+                    <span class="badge">tradicional</span>
+                    <div class="preco">100,00Kz</div>
+                    <p>O clássico, com pedaços da fruta múcua. Sabor autêntico.</p>
+                </div>
+            </div>
+            
+            <!-- 2. Múcua e Pitaya -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/1e0f38b639c12ee131c37cb5741981bd.jpg" alt="Gelado de Múcua e Pitaya">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-honey-pot"></i></div>
+                    <h3>Múcua e Pitaya</h3>
+                    <span class="badge">especial</span>
+                    <div class="preco">100,00 Kz</div>
+                    <p>Combinação perfeita da múcua com a pitaya. Extra cremoso.</p>
+                </div>
+            </div>
+            
+            <!-- 3. Maracujá -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/70aba24c5b9d453a31491020b4c5595e.jpg" alt="Gelado Gourmet de Maracujá">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-coconut"></i></div>
+                    <h3>Gelado Gourmet de Maracujá</h3>
+                    <span class="badge">tropical</span>
+                    <div class="preco">100,00 Kz</div>
+                    <p>Com maracujá fresco. Sabor tropical e levemente ácido.</p>
+                </div>
+            </div>
+            
+            <!-- 4. Mousse de limão -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/8b9a73ee67850131e758c9617402befe.jpg" alt="Mousse de Limão">
+                </div>
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h3>Mousse de Limão</h3>
+                    <span class="badge">gourmet</span>
+                    <div class="preco">200,00 Kz</div>
+                    <p>Mousse cremosa com limão. Suave e deliciosa.</p>
+                </div>
+            </div>
+
+            <!-- 5. gelado de morango -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/81387d15c59366e502cfde8c94ea3e75.jpg" alt="Gelado de Morango">
+                </div>
+                <div class="card-content">
+                    <span class="badge-novo">NOVO</span>
+                    <div class="card-icon"><i class="fas fa-candy-cane"></i></div>
+                    <h3>Gelado Gourmet de Morango</h3>
+                    <span class="badge badge-verde">Gourmet Especial</span>
+                    <div class="preco">150,00 Kz</div>
+                    <p>Morango. Uma explosão de sabores!</p>
+                </div>
+            </div>
+
+            <!-- 6. gelado de abacate -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/658f49583c32309a3923ced54b3fd958.jpg" alt="Gelado Gourmet de Abacate">
+                </div>
+                <div class="card-content">
+                    <span class="badge-novo">NOVO</span>
+                    <div class="card-icon"><i class="fas fa-strawberry"></i></div>
+                    <h3>Gelado Gourmet de Abacate</h3>
+                    <span class="badge badge-laranja">Gourmet</span>
+                    <div class="preco">150,00 Kz</div>
+                    <p>Abacate com leite. Refrescante e doce.</p>
+                </div>
+            </div>
+
+            <!-- 7. Iogurte caseiro-->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/581a06470f4f3d1e3c19e4b3200bf5eb.jpg" alt="Iogurte Caseiro">
+                </div>
+                <div class="card-content">
+
+                    <div class="card-icon"><i class="fas fa-coconut"></i></div>
+                    <h3>Iogurte Natural</h3>
+                    <span class="badge badge-roxo">natural</span>
+                    <div class="preco">500,00 Kz</div>
+                    <p>Iogurte natural. Sabor de paraíso.</p>
+                </div>
+            </div>
+
+            <!-- 8. Mousse de maracujá -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/e2d55f51870b282d76fc04189dd5b875.jpg" alt="Mousse de Maracujá">
+                </div>
+                <div class="card-content">
+                    <span class="badge-novo">NOVO</span>
+                    <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Mousse de Maracujá</h3>
+                    <span class="badge badge-verde">Tropical</span>
+                    <div class="preco">200,00 Kz</div>
+                    <p>Maracujá fresca. Cremosa e natural.</p>
+                </div>
+            </div>
+
+            <!-- 9. gourmet de manga -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="img/Manga.jpg" alt="Gelado Gourmet de Manga">
+                </div>
+                <div class="card-content">
+                    <span class="badge-novo">NOVO</span>
+                    <div class="card-icon"><i class="fas fa-cookie"></i></div>
+                    <h3>Gelado Gourmet de Manga</h3>
+                    <span class="badge badge-laranja">gourmet</span>
+                    <div class="preco">200,00 Kz</div>
+                    <p>Gelado de Manga cremoso com pedaços da fruta. Irresistível!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PEDIDOS PAGE -->
+    <div id="pedidos-page" class="page">
+        <div class="section-title">
+            <h2>Faça seu pedido</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="pedidos-container">
+            <div class="form-pedido">
+                <form id="pedidoForm">
+                    <div class="form-grupo">
+                        <label>Nome completo</label>
+                        <input type="text" placeholder="Ex: Ana Ribeiro" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" placeholder="+244 923 456 860" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Sabor</label>
+                        <select required>
+                            <option>Múcua Puro - 100,00 Kz</option>
+                            <option>Múcua e Pitaya - 100,00Kz</option>
+                            <option>Gourmet de Maracujá - 100,00 Kz</option>
+                            <option>Mousse de Limão - 200,00 Kz</option>
+                            <option>Gelado Gourmet de Morango - 150,00 Kz (NOVO)</option>
+                            <option>Gelado Gourmet de Abacate - 150,00 Kz (NOVO)</option>
+                            <option>Iogurte Natural - 500,00 Kz (NOVO)</option>
+                            <option>Mousse de Maracujá - 200,00 Kz (NOVO)</option>
+                            <option>Gelado Gourmet de Manga - 200,00 Kz (NOVO)</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Quantidade</label>
+                        <input type="number" min="1" value="2" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label>Endereço de entrega</label>
+                        <textarea placeholder="Bloco, rua, ponto de referência" required>Centralidade do Zango 8000</textarea>
+                    </div>
+                    <button type="submit" class="btn-pedido"><i class="fab fa-whatsapp"></i> Enviar pedido via WhatsApp</button>
+                </form>
+            </div>
+            <div class="info-pedido">
+                <h3><i class="fas fa-info-circle"></i> Como funciona</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Preencha o formulário</li>
+                    <li><i class="fas fa-check"></i> Envie via WhatsApp</li>
+                    <li><i class="fas fa-check"></i> Confirmaremos o pedido</li>
+                    <li><i class="fas fa-check"></i> Pagamento na entrega</li>
+                </ul>
+                <div style="margin-top: 2rem; padding: 1rem; background: var(--creme); border-radius: 30px;">
+                    <p><i class="fas fa-shield-alt" style="color: var(--azul-logo);"></i> Aceitamos dinheiro, Multicaixa Express ou transferência.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTATO PAGE -->
+    <div id="contato-page" class="page">
+        <div class="section-title">
+            <h2>Fale connosco</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="contato-wrapper">
+            <div class="contato-card">
+                <h3>Doces Sabores</h3>
+                <div class="contato-item">
+                    <i class="fas fa-map-pin"></i>
+                    <span>Centralidade do Zango 8000, Bloco Z8<br>Luanda, Angola</span>
+                </div>
+                <div class="contato-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+244 930 249 187</span>
+                </div>
+               
+                <div class="contato-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Segunda a Sábado: 09h - 19h</span>
+                </div>
+                <a href="https://wa.me/244930249187?text=Olá!%20Gostaria%20de%20Informações%20Sobre%20o%20Gelado%20de%20Múcua%20e%20Sobremesas%20Artesanais." class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp 
+                </a>
+            </div>
+            <div class="mapa-container">
+                <div class="mapa-info">
+                    <i class="fas fa-map-marker-alt"></i> Centralidade do Zango 8000, Bloco Z8 - Luanda
+                </div>
+                <div id="mapa"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Doces Sabores 2026 | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script>
+        // Função para alternar páginas
+        function showPage(pageId) {
+            // Esconder todas as páginas
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active-page');
+            });
+            
+            // Mostrar página selecionada
+            const selectedPage = document.getElementById(pageId + '-page');
+            if(selectedPage) {
+                selectedPage.classList.add('active-page');
+                
+                // Se for a página de contato, inicializar/atualizar o mapa
+                if(pageId === 'contato') {
+                    setTimeout(initMap, 100);
+                }
+            }
+            
+            // Atualizar botões ativos
+            document.querySelectorAll('.nav-link, .page-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.dataset.page === pageId) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Variável global para o mapa
+        let map = null;
+        
+        // Função para inicializar o mapa com a localização do Zango
+        function initMap() {
+            // Coordenadas aproximadas da Centralidade do Zango 8000
+            const latitude = -8.9678;
+            const longitude = 13.2833;
+            
+            if (map) {
+                map.setView([latitude, longitude], 16);
+                return;
+            }
+            
+            map = L.map('mapa').setView([latitude, longitude], 16);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            const marker = L.marker([latitude, longitude]).addTo(map);
+            
+            marker.bindPopup(`
+                <b>🍦 Doces Sabores</b><br>
+                Centralidade do Zango 8000<br>
+                Bloco Z8<br>
+                Luanda, Angola<br>
+                <i class="fas fa-phone"></i> +244 930 249 187
+            `).openPopup();
+            
+            L.circle([latitude, longitude], {
+                color: '#0033a0',
+                fillColor: '#0033a0',
+                fillOpacity: 0.1,
+                radius: 200
+            }).addTo(map);
+        }
+
+        // Adicionar eventos a todos os links de navegação
+        document.querySelectorAll('.nav-link, .page-btn').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = this.dataset.page;
+                if(page) {
+                    showPage(page);
+                    window.scrollTo(0, 0);
+                }
+            });
+        });
+
+        // Interceptar envio do formulário
+        const pedidoForm = document.getElementById('pedidoForm');
+        if(pedidoForm) {
+            pedidoForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nome = this.querySelector('input[type="text"]').value;
+                const telefone = this.querySelector('input[type="tel"]').value;
+                const sabor = this.querySelector('select').value;
+                const quantidade = this.querySelector('input[type="number"]').value;
+                const endereco = this.querySelector('textarea').value;
+                
+                const mensagem = `Olá! Gostaria de fazer um pedido:%0A%0A
+                    *Nome:* ${nome}%0A
+                    *Telefone:* ${telefone}%0A
+                    *Sabor:* ${sabor}%0A
+                    *Quantidade:* ${quantidade}%0A
+                    *Endereço:* ${endereco}`;
+                
+                const numero = '244930249187';
+                window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+            });
+        }
+
+        // Inicializar mapa quando a página carregar
+        window.addEventListener('load', function() {
+            if(document.getElementById('contato-page').classList.contains('active-page')) {
+                initMap();
+            }
+        });
+    </script>
+</body>
+</html>
